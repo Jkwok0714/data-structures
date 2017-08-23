@@ -4,6 +4,7 @@ var Stack = function() {
   var someInstance = {};
   extend(someInstance, stackMethods);
   someInstance.numItems = 0;
+  someInstance.storage = {};
   return someInstance;
 };
 
@@ -18,9 +19,13 @@ var stackMethods = {};
 stackMethods.size = function() {
   return this.numItems;
 }
-stackMethods.push = function() {
+stackMethods.push = function(value) {
+  this.storage[this.numItems] = value;
   this.numItems++;
 }
-stackMethods.pop = function() {
+stackMethods.pop = function(value) {
+  let result = this.storage[this.numItems-1];
+  delete this.storage[this.numItems-1];
   (this.numItems > 0) ? this.numItems-- : this.numItems = 0;
+  return result;
 }
