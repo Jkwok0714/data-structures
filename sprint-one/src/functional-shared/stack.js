@@ -22,5 +22,5 @@ stackMethods.push = function() {
   this.numItems++;
 }
 stackMethods.pop = function() {
-  this.numItems--;
+  (this.numItems > 0) ? this.numItems-- : this.numItems = 0;
 }
