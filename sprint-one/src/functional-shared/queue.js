@@ -12,12 +12,6 @@ var Queue = function() {
 
 var queueMethods = {};
 
-// let extend = function(target, origin) {
-//   for (var key in origin) {
-//     target[key] = origin[key];
-//   }
-// }
-
 queueMethods.size = function() {
   return this.length;
 }
