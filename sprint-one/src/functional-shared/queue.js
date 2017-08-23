@@ -22,5 +22,5 @@ queueMethods.enqueue = function() {
   this.length++;
 }
 queueMethods.dequeue = function() {
-  this.length--;
+  this.length > 0 ? this.length-- : this.length = 0;
 }
