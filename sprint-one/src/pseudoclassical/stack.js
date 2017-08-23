@@ -10,7 +10,7 @@ Stack.prototype.size = function() {
   return this.length;
 }
 Stack.prototype.push = function(value) {
-  this.storage[length] = value;
+  this.storage[this.length] = value;
   this.length++;
 }
 Stack.prototype.pop = function() {
